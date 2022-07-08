@@ -40,8 +40,8 @@ body {
 
 .grid-box {
     display: grid;
-    /* grid-template: minmax(100px, auto) 1fr minmax(100, auto); */
-    /* grid-template-rows: minmax(100px, auto) 1fr minmax(100, auto); */
+    grid-template: minmax(100px, auto) 1fr minmax(100, auto);
+    grid-template-rows: minmax(100px, auto) 1fr minmax(100, auto);
     grid-template-areas: "h h h" "nav a link" "f f f";
     min-width: 100%;
     height: 100%;
@@ -59,17 +59,21 @@ body {
 .nav {
     grid-area: nav;
     background-color: orange;
+    min-width: 200px;
 }
 
 .link {
     grid-area: link;
     background-color: darkviolet;
+    min-width: 200px;
 }
 
 .footer {
     grid-area: f;
     background-color: #00807c;
 }
+
+/* Responsive Function */
 
 @media (max-width: 700px) {
     .grid-box {
