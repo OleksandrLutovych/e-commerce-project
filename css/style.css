@@ -6,55 +6,20 @@
 
 body {
     margin: 0;
-
 }
 
-.general-text {
+/* Fonts and Paddings */
+
+.header-title {
     color: #ffffff;
     font-size: 32px;
 }
 
-.tittle {
-    padding: 20px;
-}
-
-.subtitle {
-    padding: 20px;
-}
-.main-tittle{
+.nav-title,
+.link-title {
     padding: 10px;
 }
-
-
-/*Container Grid=========*/
-.container {
-    min-height: 100%;
-    display: grid;
-    grid-template: minmax(100px auto) 1fr minmax(100px auto);
-    grid-template-areas: "header"
-    "main" "footer";
-}
-
-.main {
-    grid-area: main;
-    display: grid;
-    grid-template-columns: [col1] 150px [col2] 1fr [col3] 150px;
-}
-
-.footer {
-    grid-area: footer;
-    background-color: #00807c;
-    grid-row-end: auto;
-}
-
-.header {
-    grid-area: header;
-    background-color: dodgerblue;
-}
-
-/*Main Grid========================*/
-
-.item {
+.property {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -62,28 +27,43 @@ body {
 }
 .article-title {
     font-weight: bold;
-    padding: 10px;
+    padding: 10px 0 0 25px;
 }
-.article-subtitle{
+.article-text{
     padding: 10px 25px;
     text-align: justify;
+} 
+
+/* Container Grid */
+
+.grid-box {
+    display: grid;
+    grid-template-columns: minmax(200px, auto) 1fr minmax(200, auto);
+    grid-template-rows: minmax(200px, auto) 1fr minmax(200, auto);;
+    grid-template-areas: "h h h" "nav a link" "f f f";
 }
 
-
-
+.header {
+    grid-area: h;
+    background-color: dodgerblue;
+}
 
 .article {
-    grid-area: aritcle;
-    grid-column: 2;
-    grid-row: 1;
+    grid-area: a;
+    
 }
 
 .nav {
+    grid-area: nav;
     background-color: orange;
-    grid-column: 1;
 }
 
-.links {
+.link {
+    grid-area: link;
     background-color: darkviolet;
-    grid-column: 3;
+}
+
+.footer {
+    grid-area: f;
+    background-color: #00807c;
 }
