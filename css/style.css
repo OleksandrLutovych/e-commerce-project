@@ -10,7 +10,8 @@ body {
 
 /* Fonts and Paddings */
 
-.header-title {
+.header-title,
+.footer-title {
     color: #ffffff;
     font-size: 32px;
 }
@@ -50,7 +51,6 @@ body {
 
 .article {
     grid-area: a;
-    
 }
 
 .nav {
