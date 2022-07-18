@@ -16,54 +16,87 @@
     </header>
     <main class="content">
         <form action="" class="firstName text-property">
-            <label class="textPropery" for="">First name*</label><br>
-            <input class="input-style" type="text">
+            <label for="">First name*</label>
+            <input class="input-style" type="text" placeholder="enter your first name">
         </form>
+
         <form action="" class="lastName text-property">
-            <label for="">Last name</label><br>
-            <input class="input-style" type="text">
+            <label for="">Last name</label>
+            <input class="input-style" type="text" placeholder="enter your last name">
         </form>
+
         <form action="" class="email text-property">
-            <label for="">Email*</label><br>
-            <input class="input-style" type="text">
+            <label for="">Email*</label>
+            <input class="input-style" type="email" placeholder="enter your email">
         </form>
+
         <form action="" class="password text-property">
-            <label for="">Password*</label><br>
-            <input class="input-style" type="text">
+            <label for="">Password*</label>
+            <input class="input-style" type="password" placeholder="enter your password">
         </form>
+
         <form action="" class="confirmPassword text-property">
-            <label for="">Confirm Password*</label><br>
-            <input class="input-style" type="text">
+            <label for="">Confirm Password*</label>
+            <input class="input-style" type="password" placeholder="enter your password again">
         </form>
-        <form action="" class="gender text-property">
+
+        <form action="" class="Gender text-property">
             <p>Gender:</p>
-            <label for=""></label><br>
-            <input class="input-style" type="text">
+            <div class="gender">
+                <input class="input-style-gender" type="radio" name="gender" id="male">
+                <label for="male">Male</label><br>
+                <input class="input-style-gender" type="radio" name="gender" id="female">
+                <label for="female">Female</label><br>
+            </div>
         </form>
-        <form action="" class="hobbies text-property">
+
+        <form action="" class="Hobbies text-property">
             <p>Hobbies</p>
-            <label for=""></label><br>
-            <input class="input-style" type="text">
+            <div class="hobbies">
+                <input class="input-style-hobbies" type="radio" name="hobbies" id="music">
+                <label for="music">Music</label>
+                <input class="input-style-hobbies" type="radio" name="hobbies" id="sports">
+                <label for="sports">Sports</label>
+                <input class="input-style-hobbies" type="radio" name="hobbies" id="travel">
+                <label for="travel">Travel</label>
+                <input class="input-style-hobbies" type="radio" name="hobbies" id="movies">
+                <label for="movies">Movies</label>
+            </div>
         </form>
-        <form action="" class="sourceofIncome text-property">
-            <label for="">Source of Income</label><br>
-            <input class="input-style" type="text">
+
+        <form id="source-of-income" class="sourceofIncome text-property">
+            <label for="">Source of Income</label>
+            <select class="source-of-income__input-style" name="" id="source-of-income">
+                <option value="Employed">Employed</option>
+                <option value="Business">Business</option>
+                <option value="Stock Devidends">Stock Devidends</option>
+                <option value="Inheritance">Inheritance</option>
+            </select>
         </form>
-        <form action="" class="Income text-property">
-            <label for="">Income</label><br>
-            <input class="input-style" type="text">
+
+        <form oninput="result.value=parseInt(a.value)" class="income text-property">
+            <label for="">Income</label>
+            <div class="income__inner">
+                <input class="oninput2" type="range" name="a" value="20">
+                <div class="colorblock">
+                    <output class="oninput1" name="result">20</output>
+                    <p class="oninput2">K</p>
+                </div>
+            </div>
         </form>
-        <form action="" class="uploadPicture text-property">
-            <label for="">Upload Profile Picture</label><br>
-            <input class="input-style" type="text">
+
+        <form action="" class="upload-picture text-property">
+            <label class="">Upload Profile Picture</label>
+            <input class="upload-picture__style" type="file" accept="image/png, image/jpeg">
         </form>
+
         <form action="" class="age text-property">
-            <label for="">Age</label><br>
+            <label for="">Age</label>
             <input class="input-style" type="text">
         </form>
         <form action="" class="bio text-property">
-            <label for="">Bio</label><br>
-            <input class="input-style" type="text">
+            <label for="">Bio</label>
+            <textarea name="textarea" class="input-style textarea"></textarea>
         </form>
 
     </main>
