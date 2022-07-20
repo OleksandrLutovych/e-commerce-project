@@ -1,1 +1,72 @@
-/*# sourceMappingURL=style.css.map */
+body {
+  margin: 150px;
+  background-color: grey;
+}
+
+.animation {
+  padding: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.packman {
+  background-color: darkgoldenrod;
+  min-width: 100px;
+  min-height: 100px;
+  -webkit-animation-name: packman;
+          animation-name: packman;
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
+}
+
+@-webkit-keyframes packman {
+  25% {
+    transform: rotate(90deg);
+    border-color: aqua;
+  }
+  100% {
+    transform: rotate(0, 25turn);
+    border-top-color: bisque;
+  }
+}
+
+@keyframes packman {
+  25% {
+    transform: rotate(90deg);
+    border-color: aqua;
+  }
+  100% {
+    transform: rotate(0, 25turn);
+    border-top-color: bisque;
+  }
+}
+.point {
+  margin-right: 100px;
+  background-color: #fff;
+  min-width: 30px;
+  min-height: 30px;
+  border-radius: 50%;
+  -webkit-animation-name: movement-point;
+          animation-name: movement-point;
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
+}
+
+@-webkit-keyframes movement-point {
+  from {
+    transform: translateX(3000%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes movement-point {
+  from {
+    transform: translateX(3000%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}/*# sourceMappingURL=style.css.map */
