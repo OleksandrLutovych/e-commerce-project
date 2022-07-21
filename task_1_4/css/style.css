@@ -3,6 +3,11 @@ body {
   background-color: grey;
 }
 
+.container {
+  margin: auto 200px;
+  max-width: 1200px;
+}
+
 .playground {
   display: flex;
   align-items: center;

@@ -2,6 +2,10 @@ body {
     margin: 150px;
     background-color: grey;
 }
+.container {
+    margin: auto 200px;
+    max-width: 1200px;
+}
 
 .playground {
     display: flex;
