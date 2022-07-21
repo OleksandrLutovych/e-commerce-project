@@ -3,57 +3,82 @@ body {
     background-color: grey;
 }
 
-.animation {
-    padding: 200px;
+.playground {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    overflow: hidden;
 }
+
 // Packman
+
 .packman {
-    background-color: darkgoldenrod;
-    min-width: 100px;  
-    min-height: 100px;
-    // border-radius: 100%;
-    animation-name: packman;
-    animation-duration: 5s;
+    position: absolute;
+    z-index: 1;   
+    margin-left: -10px; 
 }
 
-@keyframes packman {
-  0% {
-    
-  }
-    
-  25% {
-    transform: rotate(90deg);
-    border-color: aqua;
-  }
-  50% {
+.packman::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 0;
+    height: 0;
+    border: solid 50px darkgoldenrod;
+    border-radius: 50%; 
+    border-bottom: 50px solid transparent;
+    border-right: 50px solid transparent;
+    animation: packman-top linear .6s infinite ;
+}
 
-  }
-  100% {
-    transform: rotate(-0,25turn);
-    border-top-color: bisque;
-  }
+.packman::after {  
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    border:  50px solid darkgoldenrod;
+    border-top: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-radius: 50%;
+    animation: packman-bottom linear .6s infinite;
+}
+
+@keyframes packman-top {
+    50%{
+        transform: rotate(44.5deg);
+    }
+    100%{
+        transform: rotate(0);
+    }
+}
+
+@keyframes packman-bottom {
+    50%{
+        transform: rotate(-44.5deg);
+    }
+    100%{
+        transform: rotate(0);
+    }
 }
 
 // Balls
 
-.point {
+.ball {
+    display: block;
     margin-right: 100px;
     background-color: #fff;
-    min-width:  30px;
-    min-height: 30px;
+    min-width:  20px;
+    min-height: 20px;
     border-radius: 50%;
-    animation-name: movement-point;
-    animation-duration: 5s;
+    animation: movement-point 3s linear infinite;
+    z-index: 0;
 }
 
 @keyframes movement-point {
-    from {
-        transform: translateX(3000%);
+    0% {
+        transform: translateX(-100%)
     }
-    to {
-        transform: translateX(-100%);
+    100% {
+        transform: translateX(-3000%)
     }
 }

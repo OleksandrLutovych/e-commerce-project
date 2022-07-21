@@ -3,70 +3,105 @@ body {
   background-color: grey;
 }
 
-.animation {
-  padding: 200px;
+.playground {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  overflow: hidden;
 }
 
 .packman {
-  background-color: darkgoldenrod;
-  min-width: 100px;
-  min-height: 100px;
-  -webkit-animation-name: packman;
-          animation-name: packman;
-  -webkit-animation-duration: 5s;
-          animation-duration: 5s;
+  position: absolute;
+  z-index: 1;
+  margin-left: -10px;
 }
 
-@-webkit-keyframes packman {
-  25% {
-    transform: rotate(90deg);
-    border-color: aqua;
+.packman::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 0;
+  height: 0;
+  border: solid 50px darkgoldenrod;
+  border-radius: 50%;
+  border-bottom: 50px solid transparent;
+  border-right: 50px solid transparent;
+  -webkit-animation: packman-top linear 0.6s infinite;
+          animation: packman-top linear 0.6s infinite;
+}
+
+.packman::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 0;
+  border: 50px solid darkgoldenrod;
+  border-top: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-radius: 50%;
+  -webkit-animation: packman-bottom linear 0.6s infinite;
+          animation: packman-bottom linear 0.6s infinite;
+}
+
+@-webkit-keyframes packman-top {
+  50% {
+    transform: rotate(44.5deg);
   }
   100% {
-    transform: rotate(0, 25turn);
-    border-top-color: bisque;
+    transform: rotate(0);
   }
 }
 
-@keyframes packman {
-  25% {
-    transform: rotate(90deg);
-    border-color: aqua;
+@keyframes packman-top {
+  50% {
+    transform: rotate(44.5deg);
   }
   100% {
-    transform: rotate(0, 25turn);
-    border-top-color: bisque;
+    transform: rotate(0);
   }
 }
-.point {
+@-webkit-keyframes packman-bottom {
+  50% {
+    transform: rotate(-44.5deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
+@keyframes packman-bottom {
+  50% {
+    transform: rotate(-44.5deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
+.ball {
+  display: block;
   margin-right: 100px;
   background-color: #fff;
-  min-width: 30px;
-  min-height: 30px;
+  min-width: 20px;
+  min-height: 20px;
   border-radius: 50%;
-  -webkit-animation-name: movement-point;
-          animation-name: movement-point;
-  -webkit-animation-duration: 5s;
-          animation-duration: 5s;
+  -webkit-animation: movement-point 3s linear infinite;
+          animation: movement-point 3s linear infinite;
+  z-index: 0;
 }
 
 @-webkit-keyframes movement-point {
-  from {
-    transform: translateX(3000%);
-  }
-  to {
+  0% {
     transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(-3000%);
   }
 }
 
 @keyframes movement-point {
-  from {
-    transform: translateX(3000%);
-  }
-  to {
+  0% {
     transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(-3000%);
   }
 }/*# sourceMappingURL=style.css.map */
