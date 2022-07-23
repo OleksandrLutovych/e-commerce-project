@@ -9,11 +9,9 @@ body, p {
 .winter {
   width: 100%;
   height: 1000px;
-  background: url("../image/winter.jpg") no-repeat;
+  background: url("../image/winter.jpg") center/cover no-repeat fixed;
   background-size: cover;
-  background-attachment: fixed;
   box-shadow: #ebecee 0px -10px 20px inset;
-  overflow: hidden;
 }
 .winter__title {
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
@@ -24,72 +22,24 @@ body, p {
 }
 
 .spring {
-  position: relative;
   width: 100%;
-  height: 100vh;
-  background: url("../image/spring.jpg") no-repeat;
-  background-size: cover;
-  color: rgb(112, 221, 112);
+  height: 1000px;
+  background: url("../image/spring.jpg") center/cover no-repeat fixed;
   box-shadow: #ebecee 0px 10px 20px inset;
-  text-decoration: underline;
-  overflow-x: hidden;
-  overflow-y: auto;
-  perspective: 500px;
 }
 .spring__title {
-  font-family: "Edu NSW ACT Foundation", cursive;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   text-align: center;
   padding-top: 400px;
   font-weight: bold;
   font-size: 72px;
 }
-.spring .soap-bubble {
-  width: 100px;
-  height: 100px;
-  position: absolute;
-}
-
-.spring__elements {
-  transform-style: preserve-3d;
-}
-
-.bee {
-  position: absolute;
-  width: 100px;
-  height: 100px;
-}
-
-.bee-1 {
-  background: url("../image/spring-bee.png");
-  background-size: cover;
-  top: 200px;
-  left: 100px;
-  transform: translateZ(-2000px) scale(10);
-}
-
-.bee-2 {
-  top: 500px;
-  right: 20px;
-  transform: translateZ(-500px) scale(1);
-}
-
-.bee-3 {
-  bottom: 300px;
-  right: 600px;
-  transform: translateZ(-1100px) scale(1);
-}
-
-.bee-4 {
-  bottom: 100px;
-  left: 400px;
-}
 
 .summer {
   width: 100%;
   height: 1000px;
-  background: url("../image/summer.jpg") no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
+  background: url("../image/summer.jpg") center/cover no-repeat fixed;
+  box-shadow: #ebecee 0px 10px 20px inset;
 }
 .summer__title {
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
@@ -97,14 +47,13 @@ body, p {
   padding-top: 400px;
   font-weight: bold;
   font-size: 72px;
-  text-decoration: underline;
 }
 
 .autumn {
   width: 100%;
   height: 1000px;
-  background: url("../image/autumn.jpg") no-repeat;
-  background-size: cover;
+  background: url("../image/autumn.jpg") center/cover no-repeat fixed;
+  box-shadow: #ebecee 0px 10px 20px inset;
 }
 .autumn__title {
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
