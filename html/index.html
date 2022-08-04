@@ -36,14 +36,44 @@
             <div class="section__item">
                 <a class="item__title inline" id="inline">display: inline</a>
                 <p class="item__content">
-                    An element with a display property set to <span class="tags-decoration">&ltinline&gt</span> will not
+                    An element with a display property set to <span class="tags-decoration">inline</span> will not
                     start on a new line and it will take up
                     the
                     remaining/available screen width. It just takes up the space such an element would normally take.
-                    Because of this, you can't set the width and height of an element that has a display of inline,
+                    Because of this, you can't set the <span class="tags-decoration">width</span> and <span
+                        class="tags-decoration">height</span> of an element that has a display of inline,
                     becuase
                     it does not take up the whole screen width. Some elements are inline by default, like <span
-                        class="tags-decoration">i</span>, and <span class="tags-decoration">img</span>;
+                        class="tags-decoration">&ltspan&gt</span>, <span class="tags-decoration">&lta&gt</span>, <span
+                        class="tags-decoration">&lti&gt</span>, and <span class="tags-decoration">&ltimg&gt</span>;
+                <div class="item__example">
+                    <p class="item__example-teg">&ltdiv&gt</p>
+                    <p class="item__example-code">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        <span class="item__example-teg">&ltspan&gt</span> This is an inline lement <span
+                            class="item__example-teg">&lt/span&gt</span> Modi eaque debitis eos quod labore
+                        maiores delectus asperiores voluptatem voluptas soluta!
+                    </p>
+                    <p class="item__example-teg">&lt/div&gt</p>
+                </div>
+                <div class="item__example">
+                    <p class="item__example-teg">body {</p> 
+                    <p class="item__example-code">display: flex;</p>
+                    <p class="item__example-code">align-items: center;</p>
+                    <p class="item__example-code">justify-content: center;</p>
+                    <p class="item__example-code">height: 100vh;</p>
+                    <p class="item__example-code">font-size: 2rem;</p>
+                    <p class="item__example-code item__example-teg">}</p>
+                    <p class="item__example-teg">div {</p>
+                    <p class="item__example-code">max-width: 600px;</p>
+                    <p class="item__example-code item__example-teg">}</p>
+                    <p class="item__example-teg">span {</p>
+                    <p class="item__example-code">background-color: #006100;;</p>
+                    <p class="item__example-code item__example-teg">}</p>
+
+                </div>
+                <div class="item__example">
+                    <img class="item__example-img" src="../image/inline-display.png" alt="#">
+                </div>
             </div>
             <div class="section__item">
                 <a class="item__title block" id="block">display: block</a>
@@ -102,35 +132,36 @@
                         class="tags-decoration">&ltdiv&gt</span>, or any container of your choice.
                     You make a table with the HTML <span class="tags-decoration">&lttable&gt</span> element like this:
                 </p>
-                <div class="section__item none">
-                    <a class="item__title" id="none">display: none</a>
-                    <p class="item__content">When you set the display property of an element to none, the
-                        element is
-                        completely taken off the page and it doesn’t have an effect on the layout.
-                        This also means that devices like screen readers, which make websites accessible to
-                        blind
-                        people, wont't have access to the element.
-                        Do not confuse display: none with visibility: hidden. The latter also hides the
-                        element,
-                        but
-                        leaves the space it would normally take open or empty.</p>
-                </div>
-                <div class="section__item">
-                    <a class="item__title initial" id="initial">display: initial</a>
-                    <p class="item__content">This sets the display property of an element to its default
-                        value.
-                        So, if you set the display property of a span to initial, it remains inline, and if
-                        you
-                        set the same value for a div, it remains block.</p>
-                </div>
-                <div class="section__item">
-                    <a class="item__title inherit" id="inherit">display: inherit</a>
-                    <p class="item__content">This makes the element inherit the display property of its
-                        parent.
-                        So, if you have a <span class="tags-decoration">&ltspan&gt</span> tag inside a div and you give
-                        the span tag a display of
-                        inherit, it turns it from inline to block element.</p>
-                </div>
+            </div>
+            <div class="section__item none">
+                <a class="item__title" id="none">display: none</a>
+                <p class="item__content">When you set the display property of an element to none, the
+                    element is
+                    completely taken off the page and it doesn’t have an effect on the layout.
+                    This also means that devices like screen readers, which make websites accessible to
+                    blind
+                    people, wont't have access to the element.
+                    Do not confuse display: none with visibility: hidden. The latter also hides the
+                    element,
+                    but
+                    leaves the space it would normally take open or empty.</p>
+            </div>
+            <div class="section__item">
+                <a class="item__title initial" id="initial">display: initial</a>
+                <p class="item__content">This sets the display property of an element to its default
+                    value.
+                    So, if you set the display property of a span to initial, it remains inline, and if
+                    you
+                    set the same value for a div, it remains block.</p>
+            </div>
+            <div class="section__item">
+                <a class="item__title inherit" id="inherit">display: inherit</a>
+                <p class="item__content">This makes the element inherit the display property of its
+                    parent.
+                    So, if you have a <span class="tags-decoration">&ltspan&gt</span> tag inside a div and you give
+                    the span tag a display of
+                    inherit, it turns it from inline to block element.</p>
+            </div>
         </section>
     </div>
 </body>

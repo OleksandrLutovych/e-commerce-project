@@ -38,17 +38,34 @@ a {
 .section {
     margin-left: 250px;
     padding:  5px 15px;
+    font-size: 20px;
 }
 .section__item {
     margin-bottom: 50px;
     line-height: 25px;
 }
 .item__title {
-    font-size: large;
+    font-size: 25px;
     font-weight: bold;
     margin-bottom: 20px;
     background-color: #dedede;
     padding: 5px;
+}
+
+.item__example {
+    background-color: #dedede;
+    width: 700px;
+    padding: 20px;
+    margin: 50px auto;
+    &-teg {
+        color: rgb(212, 135, 135);
+    }
+    &-code {
+        padding-left: 50px;
+    }
+    &-img {
+        width: 700px;
+    }
 }
 // Other========
 
@@ -56,4 +73,5 @@ a {
     height: 100%;
     display: inline;
     background-color: #dedede;
+    padding: 3px;
 }
