@@ -1,0 +1,13 @@
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+
+body, p {
+  margin: 0;
+}
+
+.carousel {
+  margin: 20px;
+}/*# sourceMappingURL=style.css.map */
