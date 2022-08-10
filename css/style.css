@@ -2,26 +2,41 @@
 ::after,
 ::before {
   box-sizing: border-box;
+  scrollbar-width: 0px;
+  scrollbar-color: transparent transparent;
 }
 
-body, p {
+*::-webkit-scrollbar {
+  width: 0;
+}
+
+body, p, a {
   margin: 0;
 }
 
+.carousel__title, .carousel__text {
+  color: #fff;
+  margin: 100px;
+  text-align: center;
+}
+
 .carousel {
+  position: relative;
   display: flex;
-  overflow: auto;
-  width: 700px;
-  height: 100%;
-  margin: 50px auto;
+  flex-flow: column nowrap;
+  align-items: center;
+  margin-top: 50px;
 }
 
 .carousel__box {
   display: flex;
+  overflow-x: auto;
+  width: 700px;
+  height: 100%;
   flex-flow: row nowrap;
-  justify-content: space-between;
   -ms-scroll-snap-type: x mandatory;
       scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
 }
 .carousel__box-block1 {
   width: 700px;
@@ -29,6 +44,7 @@ body, p {
   background: url("../image/stone1.jpg") no-repeat;
   background-size: cover;
   scroll-snap-align: center;
+  flex: none;
 }
 .carousel__box-block2 {
   width: 700px;
@@ -36,6 +52,7 @@ body, p {
   background: url("../image/stone2.jpg") no-repeat;
   background-size: cover;
   scroll-snap-align: center;
+  flex: none;
 }
 .carousel__box-block3 {
   width: 700px;
@@ -43,4 +60,38 @@ body, p {
   background: url("../image/stone3.jpg") no-repeat;
   background-size: cover;
   scroll-snap-align: center;
+  flex: none;
+}
+
+.carousel__prev,
+.carousel__next {
+  position: absolute;
+  top: 150px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  font-size: 50px;
+  text-decoration: none;
+}
+
+.carousel__prev {
+  left: 200px;
+}
+
+.carousel__next {
+  right: 200px;
+}
+
+.carousel__dot-button-box > a {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  background: grey;
+  text-decoration: none;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.carousel__dot-button-box > a:hover {
+  background: rgb(75, 72, 72);
 }/*# sourceMappingURL=style.css.map */
