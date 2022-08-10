@@ -9,5 +9,38 @@ body, p {
 }
 
 .carousel {
-  margin: 20px;
+  display: flex;
+  overflow: auto;
+  width: 700px;
+  height: 100%;
+  margin: 50px auto;
+}
+
+.carousel__box {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  -ms-scroll-snap-type: x mandatory;
+      scroll-snap-type: x mandatory;
+}
+.carousel__box-block1 {
+  width: 700px;
+  height: 400px;
+  background: url("../image/stone1.jpg") no-repeat;
+  background-size: cover;
+  scroll-snap-align: center;
+}
+.carousel__box-block2 {
+  width: 700px;
+  height: 400px;
+  background: url("../image/stone2.jpg") no-repeat;
+  background-size: cover;
+  scroll-snap-align: center;
+}
+.carousel__box-block3 {
+  width: 700px;
+  height: 400px;
+  background: url("../image/stone3.jpg") no-repeat;
+  background-size: cover;
+  scroll-snap-align: center;
 }/*# sourceMappingURL=style.css.map */
