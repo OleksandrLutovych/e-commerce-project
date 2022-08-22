@@ -4,11 +4,12 @@
   box-sizing: border-box;
 }
 
-body, p {
+body, p, a, h1 {
   margin: 0;
   font-family: "Objective";
   font-style: normal;
   color: #0F001A;
+  text-decoration: none;
 }
 
 .header {
@@ -24,16 +25,19 @@ body, p {
   text-transform: uppercase;
 }
 
-.container {
-  min-width: 300px;
-  margin: 0 10px;
+.header__nav {
+  padding-top: 40px;
+  margin-bottom: 146px;
 }
 
 @media (min-width: 350px) {
+  .container {
+    max-width: 1030px;
+    margin: 0 15px;
+  }
   .header__nav {
     display: flex;
     justify-content: space-between;
-    padding-top: 10px;
     align-items: center;
   }
   .header__nav-menu {
@@ -52,8 +56,16 @@ body, p {
     height: 40px;
     opacity: 0.5;
   }
+  .header__content {
+    display: flex;
+    flex-direction: column;
+  }
 }
-@media (min-width: 600px) {
+@media (min-width: 350px) and (min-width: 600px) {
+  .container {
+    max-width: 1030px;
+    margin: 0 15px;
+  }
   .header__nav .menu-element {
     visibility: visible;
     margin-left: 20px;
@@ -68,4 +80,64 @@ body, p {
   .header__nav .responsive-menu {
     display: none;
   }
+  .header__content {
+    display: flex;
+    flex-direction: row;
+  }
+}
+.header__content {
+  display: flex;
+  margin-right: 32px;
+}
+.header__content-title {
+  font-weight: 500;
+  font-size: 50px;
+  line-height: 70px;
+  letter-spacing: 0.02em;
+}
+.header__content-text {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 36px;
+  margin: 14px 0 60px 0;
+}
+.header__content-download {
+  display: flex;
+  margin-bottom: 151px;
+}
+.header__content-download .download-button {
+  display: flex;
+  background-color: #4A99D3;
+  width: 180px;
+  height: 60px;
+  padding: 14px 22px;
+  border-radius: 5px;
+  margin-right: 20px;
+}
+.header__content-download .google-image {
+  height: 30px;
+  width: 27px;
+}
+.header__content-download .google-top-text, .header__content-download .google-bottom-text {
+  color: #FFFFFF;
+  margin-left: 10px;
+  font-family: "Roboto", sans-serif;
+}
+.header__content-download .google-top-text {
+  font-size: 10px;
+}
+.header__content-download .google-bottom-text {
+  font-size: 18px;
+}
+.header__content-image {
+  position: relative;
+  margin: 0 0 170px 32px;
+}
+.header__content-image .mockup-small {
+  z-index: 10;
+}
+.header__content-image .mockup-big {
+  position: absolute;
+  left: 161px;
+  bottom: 0;
 }/*# sourceMappingURL=style.css.map */
