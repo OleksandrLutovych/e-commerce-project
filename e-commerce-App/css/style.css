@@ -54,7 +54,7 @@ body, p {
   }
 }
 @media (min-width: 600px) {
-  .menu-element {
+  .header__nav .menu-element {
     visibility: visible;
     margin-left: 20px;
     font-weight: 500;
@@ -62,10 +62,10 @@ body, p {
     text-decoration: none;
     color: #0F001A;
   }
-  .menu-element:nth-child(1) {
+  .header__nav .menu-element:nth-child(1) {
     color: #4A99D3;
   }
-  .responsive-menu {
+  .header__nav .responsive-menu {
     display: none;
   }
 }/*# sourceMappingURL=style.css.map */

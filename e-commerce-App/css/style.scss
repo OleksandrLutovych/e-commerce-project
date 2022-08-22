@@ -32,43 +32,42 @@ body, p {
 }
 @media (min-width:350px) {
     .header__nav {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 10px;
+    align-items: center;
+    &-menu {
         display: flex;
-        justify-content: space-between;
-        padding-top: 10px;
-        align-items: center;
-        &-menu {
-            display: flex;
-            align-items: center;
+            align-items: center;}
+    .menu-element {
+        visibility: hidden;
         }
-        .menu-element {
-            visibility: hidden;
-        }
-        .responsive-menu {
-            display: block;
-            background: url("../image/mobile-menu.png");
-            background-repeat: no-repeat;
-            background-size: cover;
-            width: 40px;
-            height: 40px;
-            opacity: 0.5;
-        }
+    .responsive-menu {
+        display: block;
+        background: url("../image/mobile-menu.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 40px;
+        height: 40px;
+        opacity: 0.5;
+    }
     }
 }
-
 @media (min-width:600px) {
-    .menu-element {
-        visibility: visible;
-        margin-left: 20px;
-        font-weight: 500;
-        font-size: 18px;
-        text-decoration: none;
-        color: #0F001A;
-    }
-    .menu-element:nth-child(1){
-        color: #4A99D3;
-    }
+    .header__nav {
+        .menu-element {
+            visibility: visible;
+            margin-left: 20px;
+            font-weight: 500;
+            font-size: 18px;
+            text-decoration: none;
+            color: #0F001A;
+        }
+        .menu-element:nth-child(1){
+            color: #4A99D3;
+        }
         .responsive-menu {
             display: none;
         }
+    }
 }
-
