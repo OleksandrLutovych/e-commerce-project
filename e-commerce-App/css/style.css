@@ -60,11 +60,20 @@ body, p, a, h1 {
     display: flex;
     flex-direction: column;
   }
+  .header__content-image {
+    position: relative;
+  }
+  .header__content-image .mockup-small {
+    z-index: 10;
+  }
+  .header__content-image .mockup-big {
+    left: 161px;
+    bottom: 0;
+  }
 }
-@media (min-width: 350px) and (min-width: 600px) {
+@media (min-width: 600px) {
   .container {
-    max-width: 1030px;
-    margin: 0 15px;
+    margin: 0 auto;
   }
   .header__nav .menu-element {
     visibility: visible;
@@ -87,7 +96,9 @@ body, p, a, h1 {
 }
 .header__content {
   display: flex;
-  margin-right: 32px;
+}
+.header__content-info {
+  margin: 32px;
 }
 .header__content-title {
   font-weight: 500;
@@ -134,10 +145,10 @@ body, p, a, h1 {
   margin: 0 0 170px 32px;
 }
 .header__content-image .mockup-small {
-  z-index: 10;
+  position: absolute;
 }
 .header__content-image .mockup-big {
-  position: absolute;
+  position: relative;
   left: 161px;
-  bottom: 0;
+  top: -75px;
 }/*# sourceMappingURL=style.css.map */

@@ -31,6 +31,7 @@ body, p, a, h1 {
     padding-top: 40px;
     margin-bottom: 146px;
 }
+
 @media (min-width:350px) {
     .container {
         max-width: 1030px;
@@ -43,7 +44,8 @@ body, p, a, h1 {
     align-items: center;
     &-menu {
         display: flex;
-            align-items: center;}
+            align-items: center;
+        }
     .menu-element {
         visibility: hidden;
         }
@@ -60,24 +62,21 @@ body, p, a, h1 {
     .header__content {
         display: flex;
         flex-direction: column;
-    }
-
-    &-image {
-        position: relative;
-        .mockup-small {
-            z-index: 10;
+        &-image {
+            position: relative;
+            .mockup-small {
+                z-index: 10;
+            }
+            .mockup-big {
+                left: 161px;
+                bottom: 0;
+            }
         }
-        .mockup-big {
-            
-            left: 161px;
-            bottom: 0;
-        }
-    }
-
+    } 
+}
 @media (min-width:600px) {
     .container {
-        max-width: 1030px;
-        margin: 0 15px;
+        margin: 0 auto;
     }
     .header__nav {
         .menu-element {
@@ -101,12 +100,14 @@ body, p, a, h1 {
         
     }
 }
-}
+
 // Header content ===
 
 .header__content {
+    &-info {
+        margin: 32px;
+    }
     display: flex;
-    margin-right: 32px;
     &-title {
         font-weight: 500;
         font-size: 50px;
@@ -155,12 +156,12 @@ body, p, a, h1 {
         position: relative;
         margin: 0 0 170px 32px;
         .mockup-small {
-            z-index: 10;
+            position: absolute;
         }
         .mockup-big {
-            position: absolute;
+            position: relative;
             left: 161px;
-            bottom: 0;
+            top: -75px;
         }
     }
 
