@@ -1,0 +1,226 @@
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+
+body, p, a, h1 {
+  margin: 0;
+  font-family: "Roboto";
+  font-style: normal;
+  color: #0F001A;
+  text-decoration: none;
+}
+
+.header {
+  background: linear-gradient(rgba(74, 153, 211, 0.2) -17.33%, rgba(74, 153, 211, 0) 75.91%), #FFFFFF;
+  box-shadow: 0px 4px 16px rgba(75, 0, 129, 0.1);
+}
+
+.main-logo {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 42px;
+  color: #4A99D3;
+  text-transform: uppercase;
+}
+
+.header__nav {
+  padding-top: 40px;
+  margin-bottom: 146px;
+}
+
+@media (min-width: 350px) {
+  .container {
+    margin: auto 15px;
+  }
+  .header__nav {
+    padding-top: 10px;
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .header__nav-menu {
+    display: flex;
+    align-items: center;
+  }
+  .header__nav .menu-element {
+    visibility: hidden;
+  }
+  .header__nav .responsive-menu {
+    display: block;
+    background: url("../image/mobile-menu.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 40px;
+    height: 40px;
+    opacity: 0.5;
+  }
+  .header__content {
+    display: flex;
+    flex-direction: row;
+  }
+  .header__content-title {
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 50px;
+    text-align: center;
+  }
+  .header__content-text {
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 18px;
+    margin: 14px 0 20px 0;
+    text-align: center;
+  }
+  .header__content-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 10px;
+  }
+  .header__content-image {
+    position: relative;
+  }
+  .header__content-image .mockup-small {
+    width: 120px;
+    height: 225px;
+    float: right;
+    position: relative;
+    z-index: 99999;
+    left: -15px;
+    bottom: -40px;
+  }
+  .header__content-image .mockup-big {
+    width: 140px;
+    height: 265px;
+    position: absolute;
+    right: -5px;
+  }
+  .header__content-download {
+    justify-content: space-between;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
+  .header__content-download .download-button {
+    margin: 5px 0;
+    display: flex;
+    background-color: #4A99D3;
+    width: 160px;
+    height: 50px;
+    padding: 7px 11px;
+    border-radius: 5px;
+  }
+  .header__content-download .google-image {
+    height: 30px;
+    width: 27px;
+  }
+  .header__content-download .google-top-text, .header__content-download .google-bottom-text {
+    color: #FFFFFF;
+    margin-left: 10px;
+    font-family: "Roboto", sans-serif;
+  }
+  .header__content-download .google-top-text {
+    font-size: 10px;
+  }
+  .header__content-download .google-bottom-text {
+    text-align: center;
+    font-size: 16px;
+  }
+}
+@media (min-width: 500px) {
+  .container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 10px;
+  }
+  .header__nav {
+    margin-bottom: 71px;
+  }
+  .header__nav .menu-element {
+    visibility: visible;
+    margin-left: 50px;
+    font-weight: 500;
+    font-size: 18px;
+    text-decoration: none;
+    color: #0F001A;
+  }
+  .header__nav .menu-element:nth-child(1) {
+    color: #4A99D3;
+  }
+  .header__nav .responsive-menu {
+    display: none;
+  }
+  .header__content {
+    max-width: 100%;
+    display: flex;
+    flex-direction: row;
+  }
+  .header__content-info {
+    margin-right: 32px;
+  }
+  .header__content-image {
+    position: relative;
+  }
+  .header__content-image .mockup-small {
+    width: 240px;
+    height: 458px;
+    position: relative;
+  }
+  .header__content-image .mockup-big {
+    width: 280px;
+    height: 535px;
+    position: absolute;
+    bottom: 75px;
+    left: 161px;
+  }
+  .header__content-title {
+    font-weight: 500;
+    font-size: 50px;
+    line-height: 70px;
+    letter-spacing: 0.02em;
+    text-align: left;
+    margin-top: 75px;
+  }
+  .header__content-text {
+    font-weight: 400;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 36px;
+    margin: 14px 0 60px 0;
+    text-align: left;
+  }
+  .header__content-download {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    margin-bottom: 151px;
+  }
+  .header__content-download .download-button {
+    display: flex;
+    background-color: #4A99D3;
+    width: 180px;
+    height: 60px;
+    padding: 14px 22px;
+    border-radius: 5px;
+    margin-right: 20px;
+  }
+  .header__content-download .google-image {
+    height: 30px;
+    width: 27px;
+  }
+  .header__content-download .google-top-text, .header__content-download .google-bottom-text {
+    color: #FFFFFF;
+    margin-left: 10px;
+    font-family: "Roboto", sans-serif;
+  }
+  .header__content-download .google-top-text {
+    font-size: 10px;
+  }
+  .header__content-download .google-bottom-text {
+    text-align: center;
+    font-size: 18px;
+  }
+}/*# sourceMappingURL=style.css.map */
