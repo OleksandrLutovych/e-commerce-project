@@ -32,7 +32,7 @@ body, p, a, h1 {
 
 @media (min-width: 350px) {
   .container {
-    max-width: 1030px;
+    max-width: 500px;
     margin: 0 15px;
   }
   .header__nav {
@@ -62,13 +62,15 @@ body, p, a, h1 {
   }
   .header__content-image {
     position: relative;
+    margin: 0 0 170px 32px;
   }
   .header__content-image .mockup-small {
-    z-index: 10;
+    position: absolute;
   }
   .header__content-image .mockup-big {
-    left: 161px;
-    bottom: 0;
+    position: relative;
+    left: 25%;
+    top: -75px;
   }
 }
 @media (min-width: 600px) {
@@ -93,12 +95,21 @@ body, p, a, h1 {
     display: flex;
     flex-direction: row;
   }
+  .header__content-image {
+    position: relative;
+    margin: 0 0 170px 32px;
+  }
+  .header__content-image .mockup-small {
+    position: absolute;
+  }
+  .header__content-image .mockup-big {
+    position: relative;
+    left: 161px;
+    top: -75px;
+  }
 }
 .header__content {
   display: flex;
-}
-.header__content-info {
-  margin: 32px;
 }
 .header__content-title {
   font-weight: 500;
@@ -138,17 +149,6 @@ body, p, a, h1 {
   font-size: 10px;
 }
 .header__content-download .google-bottom-text {
+  text-align: center;
   font-size: 18px;
-}
-.header__content-image {
-  position: relative;
-  margin: 0 0 170px 32px;
-}
-.header__content-image .mockup-small {
-  position: absolute;
-}
-.header__content-image .mockup-big {
-  position: relative;
-  left: 161px;
-  top: -75px;
 }/*# sourceMappingURL=style.css.map */
