@@ -29,11 +29,12 @@ body, p, a, h1 {
     margin-bottom: 146px;
 }
 
+// MOBILE VERSION =============
+
 @media (min-width:350px) {
     .container {
         margin: auto 15px;
     }
-// Header style =====
 // Nav =====
     .header__nav {
     padding-top: 10px;
@@ -84,7 +85,6 @@ body, p, a, h1 {
         // Mockup ====== 
         &-image {
             position: relative;
-            // min-width: 40%;
             .mockup-small {
                 width: 120px;
                 height: 225px;
@@ -115,7 +115,6 @@ body, p, a, h1 {
                 height: 50px;
                 padding: 7px 11px;
                 border-radius: 5px;
-                
             }
             .google-image {
                 height: 30px;
@@ -132,10 +131,12 @@ body, p, a, h1 {
             .google-bottom-text{
                 text-align: center;
                 font-size: 16px;
-        }
+            }
         }
     } 
 }
+
+// DESKTOP VERSION =============
 
 @media (min-width: 500px) {
     .container {
@@ -233,7 +234,7 @@ body, p, a, h1 {
         .google-bottom-text{
             text-align: center;
             font-size: 18px;
-    }
+        }
     }
     }
 }
